@@ -1,0 +1,12 @@
+version: '3'
+services:
+  bocchi-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - /location/to/the/config.json:/app/config.json
+    environment:
+      - NODE_ENV=production
